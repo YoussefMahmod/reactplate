@@ -5,10 +5,10 @@ export default function Navbar() {
   return (
     <>
       <nav>
-        <ul class='nav-menu'>
+        <ul className="nav-menu">
           {routes.map(({ name, path }) => {
             return (
-              <li class="nav-item" key={path}>
+              <li className="nav-item" key={path}>
                 <NavLink exact activeClassName="selected" to={path}>
                   {name}
                 </NavLink>

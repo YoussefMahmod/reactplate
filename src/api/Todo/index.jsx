@@ -9,7 +9,7 @@ const Todo = ({ todo }) => {
     });
   };
   return (
-    <li class="todo">
+    <li className="todo">
       {todo.value}
       <button onClick={() => removeTodo(todo.id)}>&times;</button>
     </li>
