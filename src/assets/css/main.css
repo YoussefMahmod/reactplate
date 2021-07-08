@@ -1,0 +1,29 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+ul li {
+  display: inline-block;
+  margin-left: 12px;
+  list-style: none;
+}
+
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.todo-wrapper,
+.todo-add-form,
+.about-reactplate {
+  margin: 0 auto;
+}
