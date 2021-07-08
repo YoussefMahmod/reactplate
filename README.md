@@ -85,6 +85,8 @@ export default function rank() {
 }
 ```
 
+**Note** : Index page will refer to **Home.jsx**
+
 ### URL Convertion
 
 Reactplate will convert any jsx files filename with PascalCase or camelCase to kebab-case.
