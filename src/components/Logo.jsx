@@ -5,7 +5,7 @@ export default function Logo() {
     <>
       {/* Imported images have the side benefit that, if the file is missing, the
       build will fail, and you’ll find out quick */}
-      <img src={ReactplateLogo} width="400" height="400" alt="" />
+      <h1 class="logo"><span>React</span>plate</h1>
     </>
   );
 }

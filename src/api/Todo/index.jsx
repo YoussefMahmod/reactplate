@@ -9,12 +9,10 @@ const Todo = ({ todo }) => {
     });
   };
   return (
-    <div>
-      <li>
-        {todo.value}
-        <button onClick={() => removeTodo(todo.id)}>&times;</button>
-      </li>
-    </div>
+    <li class="todo">
+      {todo.value}
+      <button onClick={() => removeTodo(todo.id)}>&times;</button>
+    </li>
   );
 };
 

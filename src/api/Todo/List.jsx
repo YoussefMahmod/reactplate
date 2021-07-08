@@ -12,7 +12,12 @@ const List = () => {
     }
   };
 
-  return <div className="todo-wrapper">Todo List : {list()}</div>;
+  return (
+    <div className="todo-wrapper">
+      <h5>Todo List :</h5> 
+      {list()}
+    </div>
+  )
 };
 
 export default List;
