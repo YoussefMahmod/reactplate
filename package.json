@@ -2,9 +2,6 @@
   "name": "reactplate",
   "version": "0.0.3",
   "description": "Minimal Setup & Fast Boilerplate for React.js with Vite",
-  "bin": {
-    "reactplate": "./bin/create-reactplate-app"
-  },
   "scripts": {
     "dev": "node server",
     "build": "yarn build:client && yarn build:server",
