@@ -12,13 +12,13 @@ export default function parseUrlString(str) {
   const hasParam = fixSlash.match(/\[(.*?)\]/);
 
   if (hasParam) {
-    var regex = /\[([^\][]*)]/g;
-    var params = [],
+    const regex = /\[([^\][]*)]/g;
+    let params = [],
       m;
     while ((m = regex.exec(fixSlash))) {
       params.push(`:${m[1]}`);
     }
-    var urlWithoutParam = fixSlash.replace(/\[.*?\]/g, "");
+    const urlWithoutParam = fixSlash.replace(/\[.*?\]/g, "");
 
     const finalUrl = `${urlWithoutParam}${params.join("/")}`.replace(
       /\/\//g,
