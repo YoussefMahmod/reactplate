@@ -8,10 +8,10 @@
 
 ## Features
 
-🚀 Dynamic Pages Routing with react-router-dom from <a href="https://reactjs.org/">React.js</a>
-🚀 Fast development with <a href="https://vitejs.dev/">Vite</a>
-🚀 SSR support with <a href="https://vitejs.dev/">Vite</a>
-🚀 PWA support with <a href="https://vitejs.dev/">Vite</a>
+🚀 Dynamic Pages Routing with react-router-dom from <a href="https://reactjs.org/">React.js</a><br/>
+🚀 Fast development with <a href="https://vitejs.dev/">Vite</a><br/>
+🚀 SSR support with <a href="https://vitejs.dev/">Vite</a><br/>
+🚀 PWA support with <a href="https://vitejs.dev/">Vite</a><br/>
 🚀 SSG support with <a href="https://vitejs.dev/">Vite</a>
 
 ---
