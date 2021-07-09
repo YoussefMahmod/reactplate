@@ -11,13 +11,13 @@ void (async function () {
   if (sliceArgs.length === 1) {
     console.log(
       chalk.red(
-        "Please input your project name! zx create-reactplate-app <project-name>"
+        "Please input your project name! npx create-reactplate-app <project-name>"
       )
     );
     process.exit(1);
   }
 
-  const projectName = sliceArgs[1];
+  const projectName = sliceArgs[0];
 
   const checkPackageName = validateNpmPackage(projectName);
 
