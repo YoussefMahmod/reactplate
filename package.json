@@ -1,6 +1,6 @@
 {
   "name": "create-reactplate-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Create Reactplate App",
   "bin": {
     "create-reactplate-app": "./bin/create-reactplate-app"
