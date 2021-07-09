@@ -5,7 +5,7 @@ const { validateNpmPackage } = require("../lib/validate-package-name");
 const output = require("../lib/output");
 const exec = require("execa");
 
-const sliceArgs = process.argv.slice(2);
+const sliceArgs = process.argv.slice(1);
 
 void (async function () {
   if (sliceArgs.length === 1) {
