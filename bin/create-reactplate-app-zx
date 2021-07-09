@@ -1,0 +1,66 @@
+#!/usr/bin/env zx
+
+const { validateNpmPackage } = require("../lib/validate-package-name");
+const output = require("../lib/output");
+const exec = require("execa");
+
+const sliceArgs = process.argv.slice(2);
+
+void (async function () {
+  if (sliceArgs.length === 1) {
+    console.log(
+      chalk.red(
+        "Please input your project name! zx create-reactplate-app <project-name>"
+      )
+    );
+    process.exit(1);
+  }
+
+  const projectName = sliceArgs[1];
+
+  const checkPackageName = validateNpmPackage(projectName);
+
+  if (!checkPackageName.valid) {
+    checkPackageName.errors.forEach((value) => {
+      console.log(chalk.red(value));
+    });
+    checkPackageName.warnings.forEach((value) => {
+      console.log(chalk.yellow(value));
+    });
+    process.exit(1);
+  }
+
+  const cmds = [
+    `mkdir ${projectName}`,
+    `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=1 reactplate-master`,
+  ];
+
+  const stopExampleSpinner = output.wait(
+    `Downloading files for ${output.cmd(projectName)}`
+  );
+  const cmdPromises = cmds.map(function (cmd) {
+    return exec.command(cmd, {
+      shell: true,
+    });
+  });
+
+  Promise.all(cmdPromises)
+    .then(function () {
+      stopExampleSpinner();
+      output.success(
+        `Downloaded ${output.cmd(projectName)} files for ${output.cmd(
+          projectName
+        )}`
+      );
+      console.log(chalk.green("Ready to develop with reactplate!"));
+    })
+    .catch(function (err) {
+      stopExampleSpinner();
+      output.error(
+        `Error downloading ${output.cmd(projectName)} files for ${output.cmd(
+          projectName
+        )}`
+      );
+      throw err;
+    });
+})();
