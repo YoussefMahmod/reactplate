@@ -2,7 +2,6 @@
   "name": "create-reactplate-app",
   "version": "1.0.0",
   "description": "Create Reactplate App",
-  "main": "index.js",
   "directories": {
     "example": "examples",
     "lib": "lib"

@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/src/assets/img/Reactplate.gif"></img>
+    <img src="/examples/src/assets/img/Reactplate.gif"></img>
 </p>
 
 <p align="center">
@@ -18,10 +18,55 @@
 
 ## Installation
 
+### create-reactplate-app
+
+```bash
+npx create-reactplate-app blog-starter
+
+cd blog-starter
+
+npm install
+
+# run server (development mode)
+npm run dev
+# run server (production mode)
+npm run serve
+# run debugger
+npm run debug
+
+# build the client side & the server side project
+npm run build
+
+# build the client side project
+npm run build:client
+
+# build the server side project
+npm run build:server
+
+# static site generate
+npm run generate
+```
+
+or using <a href="https://github.com/google/zx">Google/Zx</a>
+
+```bash
+zx https://raw.githubusercontent.com/fauzan121002/reactplate/template-generator/bin/create-reactplate-app blog-starter
+```
+
+### Development
+
+For further development and contributions, please follow the installation instructions below.
+
 ```bash
 git clone https://github.com/fauzan121002/reactplate.git
 
+# Reactplate CRA cli scope
 cd reactplate
+
+#----------------------------------
+
+# Reactplate app scope
+cd reactplate/examples
 
 npm install
 
