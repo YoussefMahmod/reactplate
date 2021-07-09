@@ -2,15 +2,8 @@
   "name": "create-reactplate-app",
   "version": "1.0.3",
   "description": "Create Reactplate App",
-  "directories": {
-    "example": "examples",
-    "lib": "lib"
-  },
   "bin": {
     "create-reactplate-app": "./bin/create-reactplate-app"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,7 +15,7 @@
     "url": "https://github.com/fauzan121002/reactplate/issues"
   },
   "homepage": "https://github.com/fauzan121002/reactplate#readme",
-  "devDependencies": {
+  "dependencies": {
     "chalk": "^4.1.1",
     "execa": "^5.1.1",
     "ms": "^2.1.3",
