@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env node
 
 const { validateNpmPackage } = require("../lib/validate-package-name");
 const output = require("../lib/output");
@@ -64,3 +64,5 @@ void (async function () {
       throw err;
     });
 })();
+
+
