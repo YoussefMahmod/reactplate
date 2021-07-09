@@ -5,10 +5,8 @@ const { validateNpmPackage } = require("../lib/validate-package-name");
 const output = require("../lib/output");
 const exec = require("execa");
 
-const sliceArgs = process.argv.slice(1);
-
 void (async function () {
-  if (sliceArgs.length === 1) {
+  if (process.argv.length <= 2) {
     console.log(
       chalk.red(
         "Please input your project name! npx create-reactplate-app <project-name>"
@@ -17,7 +15,7 @@ void (async function () {
     process.exit(1);
   }
 
-  const projectName = sliceArgs[0];
+  const projectName = process.argv[2];
 
   const checkPackageName = validateNpmPackage(projectName);
 
