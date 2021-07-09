@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const chalk = require("chalk");
 const { validateNpmPackage } = require("../lib/validate-package-name");
 const output = require("../lib/output");
 const exec = require("execa");
@@ -64,5 +65,3 @@ void (async function () {
       throw err;
     });
 })();
-
-

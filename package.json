@@ -22,7 +22,7 @@
     "url": "https://github.com/fauzan121002/reactplate/issues"
   },
   "homepage": "https://github.com/fauzan121002/reactplate#readme",
-  "dependencies": {
+  "devDependencies": {
     "chalk": "^4.1.1",
     "execa": "^5.1.1",
     "ms": "^2.1.3",
