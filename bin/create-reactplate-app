@@ -33,7 +33,7 @@ void (async function () {
 
   const cmds = [
     `mkdir ${projectName}`,
-    `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=1 reactplate-master`,
+    `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=1 reactplate-master && rm -rf master`,
   ];
 
   const stopExampleSpinner = output.wait(
