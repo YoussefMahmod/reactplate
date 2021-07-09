@@ -47,12 +47,6 @@ npm run build:server
 npm run generate
 ```
 
-or using <a href="https://github.com/google/zx">Google/Zx</a>
-
-```bash
-zx https://raw.githubusercontent.com/fauzan121002/reactplate/template-generator/bin/create-reactplate-app blog-starter
-```
-
 ### Development
 
 For further development and contributions, please follow the installation instructions below.
