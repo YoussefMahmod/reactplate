@@ -1,4 +1,4 @@
-import ReactplateLogo from "%/img/Reactplate.gif";
+import ReactplateLogo from "%/img/Reactplate.png";
 
 export default function Logo() {
   return (

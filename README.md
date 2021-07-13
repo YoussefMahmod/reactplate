@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="/examples/src/assets/img/Reactplate.gif"></img>
+    <img src="/examples/src/assets/img/Reactplate.png"></img>
 </p>
 
 <p align="center">
