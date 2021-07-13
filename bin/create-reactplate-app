@@ -4,6 +4,7 @@ const chalk = require("chalk");
 const { validateNpmPackage } = require("../lib/validate-package-name");
 const output = require("../lib/output");
 const exec = require("execa");
+const os = require("os");
 
 void (async function () {
   if (process.argv.length <= 2) {
@@ -29,10 +30,28 @@ void (async function () {
     process.exit(1);
   }
 
-  const cmds = [
-    `mkdir ${projectName}`,
-    `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=1 reactplate-master && rm -rf master`,
-  ];
+  let cmds = [];
+
+  if (
+    os.platform() == "win32" &&
+    typeof process.env.ComSpec === "string" &&
+    process.env.TERM !== "cygwin"
+  ) {
+    cmds = [
+      `mkdir ${projectName}`,
+      `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=2 reactplate-master/examples && del master`,
+    ];
+  } else if (os.platform() == "darwin") {
+    cmds = [
+      `mkdir ${projectName}`,
+      `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=2 reactplate-master/examples && rm -rf master`,
+    ];
+  } else {
+    cmds = [
+      `mkdir ${projectName}`,
+      `curl -OL https://codeload.github.com/fauzan121002/reactplate/tar.gz/master && tar -zxvf master -C ${projectName} --strip=2 reactplate-master/examples && rm -rf master`,
+    ];
+  }
 
   const stopExampleSpinner = output.wait(
     `Downloading files for ${output.cmd(projectName)}`
