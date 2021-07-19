@@ -4,6 +4,9 @@ import fetch from "node-fetch";
 
 const url = `http://localhost:${port}`;
 
+// TODO : FIX thrown: "Exceeded timeout of 10000 ms for a test.
+//        Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+
 test("/", async () => {
   await page.goto(url);
   expect(await page.textContent("h1")).toMatch("Home");
