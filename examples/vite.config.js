@@ -1,12 +1,18 @@
 import { defineConfig } from "vite";
 import reactRefresh from "@vitejs/plugin-react-refresh";
 import { VitePWA } from "vite-plugin-pwa";
+import legacy from "@vitejs/plugin-legacy";
 import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     reactRefresh(),
+    // legacy({
+    //   targets: ["Chrome >= 49", "not IE 11"],
+    //   polyfills: ["es/promise"],
+    //   additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
+    // }),
     VitePWA({
       strategies: "generateSW",
       registerType: "prompt",
