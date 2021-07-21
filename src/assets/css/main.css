@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
+
+html {
+  height: 100%;
+}
+body {
+  font-family: "Nunito";
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+nav {
+  margin-bottom: 4rem;
+  padding: 2rem 0;
+}
+
+nav .nav-menu {
+  display: flex;
+  margin: auto 2rem 0 0;
+  justify-content: center;
+  gap: 1rem;
+
+  font-size: calc(0.65em + 1vmin);
+}
+
+nav .nav-menu .nav-item {
+  list-style: none;
+}
+
+nav .nav-menu .nav-item a {
+  color: #344;
+  text-decoration: none;
+}
+nav .nav-menu .nav-item a.selected {
+  color: #004aae;
+  font-weight: bold;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 10px;
+
+  padding: 2rem;
+  margin: -2rem auto;
+  font-size: calc(0.55em + 1vmin);
+
+  text-align: center;
+}
+
+.logo {
+  font-weight: 700;
+  text-align: center;
+  font-size: 5rem;
+}
+
+.logo span {
+  color: #004aae;
+}
+input[type="text"],
+button {
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+}
+input[type="text"]:focus {
+  outline: 1px solid #004aae;
+  border: none;
+}
+button {
+  cursor: pointer;
+}
+
+img {
+  margin: 0 auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.todo-wrapper,
+.todo-add-form,
+.about-reactplate {
+  margin: 0 auto 1rem;
+  font-size: calc(0.65em + 1vmin);
+}
+
+.rank-description .rank {
+  color: red;
+}
+
+.todo-add-form input {
+  margin-right: 0.5rem;
+}
+
+.todo button {
+  margin-left: 0.5rem;
+  background-color: rgb(212, 73, 73);
+  border: none;
+  color: white;
+}
+.todo button:hover {
+  background-color: rgb(179, 64, 64);
+}
